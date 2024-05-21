@@ -47,10 +47,10 @@ jobs:
         # Set up variables
         CLANG_VERSION="6.0.1"
         CLANG_DIR="prebuilt"
-        CLANG_BIN_DIR="${CLANG_DIR}/bin"
         CLANG_TAR="clang+llvm-${CLANG_VERSION}-x86_64-linux-gnu-ubuntu-16.04.tar.xz"
         CLANG_URL="http://releases.llvm.org/${CLANG_VERSION}/${CLANG_TAR}"
-        CLANG_EXTRACT_DIR="clang+llvm-${CLANG_VERSION}-x86_64-linux-gnu"
+        CLANG_EXTRACT_DIR="clang+llvm-${CLANG_VERSION}-x86_64-linux-gnu-ubuntu-16.04"
+        CLANG_BIN_DIR="${CLANG_EXTRACT_DIR}/bin"
     
         # Create necessary directories
         mkdir -p ${CLANG_BIN_DIR}
@@ -61,9 +61,6 @@ jobs:
         tar -xf ${CLANG_TAR}
         ls -l
         ls -l clang*
-        # Move clang binary to the prebuilt/bin directory
-        mv ${CLANG_EXTRACT_DIR}/bin/clang ${CLANG_BIN_DIR}/clang
-    
         # Clean up
         rm -rf ${CLANG_EXTRACT_DIR} ${CLANG_TAR}
         
