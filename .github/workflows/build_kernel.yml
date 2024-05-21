@@ -61,8 +61,7 @@ jobs:
         tar -xf ${CLANG_TAR}
         ls -l
         ls -l clang*
-        # Clean up
-        rm -rf ${CLANG_EXTRACT_DIR} ${CLANG_TAR}
+        
         
 
         
