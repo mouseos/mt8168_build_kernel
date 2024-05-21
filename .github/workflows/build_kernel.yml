@@ -34,12 +34,6 @@ jobs:
         pwd
         ls -l
 
-    - name: Extract build_kernel.tar.gz
-      run: |
-        tar -xzf build_kernel.tar.gz
-        pwd
-        ls -l
-
     - name: Setup clang 7.0.0
       run: |
         echo  "Downloading clang 7.0.0"
