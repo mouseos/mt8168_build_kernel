@@ -24,7 +24,7 @@ jobs:
 
     - name: Download file
       run: |
-        aria2c https://fireos-tablet-src.s3.amazonaws.com/8K49yrsysRiOpSw671IlXTNGMr/Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2 -o Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2
+        aria2c -x16 https://fireos-tablet-src.s3.amazonaws.com/8K49yrsysRiOpSw671IlXTNGMr/Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2 -o Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2
         pwd
         ls -l
 
@@ -57,7 +57,7 @@ jobs:
     
         # Download and extract clang
         echo "Downloading clang ${CLANG_VERSION}"
-        curl -LO ${CLANG_URL}
+        aria2c -x16 ${CLANG_URL}
         tar -xf ${CLANG_TAR}
     
         # Move clang binary to the prebuilt/bin directory
