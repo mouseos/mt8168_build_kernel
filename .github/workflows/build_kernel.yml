@@ -49,7 +49,7 @@ jobs:
       run: |
         echo  "Downloading clang 6.0.2"
         git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android-9.0.0_r6 --single-branch
-        CLANG_DIR= $(pwd)/linux-x86/clang-4691093/bin
+        CLANG_DIR=$(pwd)/linux-x86/clang-4691093/bin
         sed -i 's|CLANG_COMPILER_PATH=""|CLANG_COMPILER_PATH='"$(pwd)"'/'"${CLANG_DIR}"'|' build_kernel_config.sh
         # Create necessary directories
 
