@@ -22,11 +22,6 @@ jobs:
     - name: Install aria2
       run: sudo apt-get install -y aria2
 
-    - name: Display current directory and list contents (after aria2 install)
-      run: |
-        pwd
-        ls -l
-
     - name: Download file
       run: |
         aria2c https://fireos-tablet-src.s3.amazonaws.com/8K49yrsysRiOpSw671IlXTNGMr/Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2 -o Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2
@@ -47,6 +42,7 @@ jobs:
 
     - name: Run build_kernel.sh
       run: |
-        ./build_kernel.sh patform.tar output
         pwd
         ls -l
+        ./build_kernel.sh platform.tar output
+        
