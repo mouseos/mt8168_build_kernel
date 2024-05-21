@@ -40,11 +40,11 @@ jobs:
         pwd
         ls -l
 
-    - name: Setup clang 7.0
+    - name: Setup clang 7.0.0
       run: |
-        echo  "Downloading clang 7.0"
+        echo  "Downloading clang 7.0.0"
         # Set up variables
-        CLANG_VERSION="7.0"
+        CLANG_VERSION="7.0.0"
         CLANG_DIR="prebuilt"
         CLANG_TAR="clang+llvm-${CLANG_VERSION}-x86_64-linux-gnu-ubuntu-16.04.tar.xz"
         CLANG_URL="http://releases.llvm.org/${CLANG_VERSION}/${CLANG_TAR}"
