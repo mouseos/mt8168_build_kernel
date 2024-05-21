@@ -24,13 +24,13 @@ jobs:
 
     - name: Download file
       run: |
-        aria2c -x16 https://fireos-tablet-src.s3.amazonaws.com/8K49yrsysRiOpSw671IlXTNGMr/Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2 -o Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2
+        aria2c -x16 https://fireos-tablet-src.s3.amazonaws.com/9OXq0RSjrgQuqrJlQ8itQTSO4r/Fire_HD8_10th_Gen-7.3.2.9-20231103.tar.bz2 -o Fire_HD8_10th_Gen-7.3.2.9-20231103.tar.bz2
         pwd
         ls -l
 
     - name: Extract tar.bz2 file
       run: |
-        tar -xjf Fire_HD8_10th_Gen-7.3.1.9-20210412.tar.bz2
+        tar -xjf Fire_HD8_10th_Gen-7.3.2.9-20231103.tar.bz2
         pwd
         ls -l
 
