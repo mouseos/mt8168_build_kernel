@@ -59,7 +59,8 @@ jobs:
         echo "Downloading clang ${CLANG_VERSION}"
         aria2c -x16 ${CLANG_URL}
         tar -xf ${CLANG_TAR}
-    
+        ls -l
+        ls -l clang*
         # Move clang binary to the prebuilt/bin directory
         mv ${CLANG_EXTRACT_DIR}/bin/clang ${CLANG_BIN_DIR}/clang
     
